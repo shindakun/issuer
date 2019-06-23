@@ -22,9 +22,11 @@ issuer was created as a learning project.
 
 Deploying is simply a matter of running `gcloud` and filling in the correct options.
 
+Clone the repo and run. Or [mirror the GitHub repo](https://cloud.google.com/source-repositories/docs/mirroring-a-github-repository) and deploy from there, update the source line as needed.
+
 ```bash
 gcloud functions deploy issuer \
-  --source https://github.com/shindakun/issuer \
+  --source ./ \
   --entry-point HandleWebhook \
   --runtime go111 \
   --trigger-http \
